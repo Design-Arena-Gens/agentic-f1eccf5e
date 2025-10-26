@@ -1,0 +1,47 @@
+/* CSS Reset (modern minimal) */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html,body{height:100%}
+body{line-height:1.6;-webkit-font-smoothing:antialiased;color:var(--text);background:radial-gradient(1200px 700px at 20% -10%,#0d1222 0%,#090f1d 35%,#070b18 55%,#050914 100%) no-repeat fixed}
+img,picture,video,canvas,svg{display:block;max-width:100%}
+input,button,textarea,select{font:inherit}
+
+:root{
+  --font-sans: system-ui, sans-serif;
+  --font-heading: ui-serif, Georgia, serif;
+  --text: #e8eaf7;
+  --muted: #a8b0d3;
+  --brand: #7c5cff;
+  --brand-2: #46e7ff;
+  --accent: #ffb457;
+  --danger: #ff6b6b;
+  --card: #0c1328;
+  --card-2: #0f1834;
+  --edge: rgba(255,255,255,0.08);
+  --glow: 0 0 0 1px rgba(124,92,255,0.35), 0 0 24px rgba(124,92,255,0.35);
+}
+
+body{
+  font-family: var(--font-sans);
+  background-attachment: fixed;
+}
+
+h1,h2,h3,h4{font-family: var(--font-heading); letter-spacing: .5px}
+
+/* Utility */
+.container{max-width:1200px;margin-inline:auto;padding:0 24px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:.9rem 1.2rem;border-radius:12px;border:1px solid var(--edge);text-decoration:none;cursor:pointer;transition:all .2s ease}
+.btn-primary{background:linear-gradient(135deg,var(--brand),#5b8bff);color:#fff;box-shadow: var(--glow)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.04)}
+
+/* Decorative background FX */
+.bg-particles{position:absolute;inset:0;pointer-events:none;mask-image:radial-gradient(70% 60% at 50% 20%,#000 40%,transparent 70%)}
+.bg-particles::before,.bg-particles::after{content:'';position:absolute;inset:auto;border-radius:50%;filter:blur(40px);opacity:.6}
+.bg-particles::before{width:360px;height:360px;left:10%;top:10%;background:conic-gradient(from 0deg at 50% 50%,rgba(124,92,255,.2),rgba(70,231,255,.15),rgba(255,180,87,.2),rgba(124,92,255,.2))}
+.bg-particles::after{width:420px;height:420px;right:8%;top:20%;background:conic-gradient(from 180deg at 50% 50%,rgba(70,231,255,.15),rgba(124,92,255,.2),rgba(255,107,107,.15),rgba(70,231,255,.15))}
+
+/* Page modules */
